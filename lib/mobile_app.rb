@@ -3,5 +3,10 @@ require 'mobile_app/jqtouch_helper'
 
 Mime::Type.register_alias "text/html", :mobile
 
-ActionController::Base.send(:include, MobileApp)
-ActionView::Base.send(:include, MobileApp::JqtouchHelper)
+class ActionController::Base
+  include MobileApp
+end
+
+class ActionView::Base
+  include MobileApp::JQTouchHelper
+end

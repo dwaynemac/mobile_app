@@ -13,7 +13,7 @@ module MobileApp
       options = {}
       options.merge!(args.pop) if args.last.kind_of?(Hash)
 
-      if options.delete(:test_mode){false}
+      if options.delete(:force_mobile){false}
         before_filter(:force_mobile)
       else
         before_filter(:prepare_for_mobile)
@@ -35,10 +35,11 @@ module MobileApp
 
     def prepare_for_mobile
       session[:mobile_param] = params[:mobile] if params[:mobile]
+      request.format = :mobile if mobile_device?
     end
 
     def force_mobile
-      
+      request.format = :mobile
     end
   end
 end
