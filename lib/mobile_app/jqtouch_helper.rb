@@ -7,7 +7,7 @@ module MobileApp::JQTouchHelper
   # <tt>mobile_back_button(text,url,options)</tt>
   #   prints:  <a href="+url+" class="back">+text+</a>
   #
-  def mobile_back_button(text,url,options)
+  def mobile_back_button(text,url,options={})
     link_to( text, url, options.merge!({:class => "back"}))
   end
 
