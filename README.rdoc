@@ -1,0 +1,24 @@
+= MobileApp
+
+Based on rrodrigu3z's rails_jqtouch http://github.com/rrodrigu3z/rails_jqtouch
+But with less functionality
+
+== Install
+
+=== Gem
+
+  soon...
+
+=== Plugin
+  script/plugin install git://github.com/dwaynemac/mobile_app.git
+
+== Usage
+
+===in controller:
+
+  ApplicationController
+
+    responds_to_mobile
+
+    ...
+  end
