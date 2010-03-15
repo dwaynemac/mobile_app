@@ -29,7 +29,7 @@ module MobileApp
       if session[:mobile_param]
         session[:mobile_param] == "1"
       else
-        request.user_agent =~ /Mobile|webOS/
+        request.user_agent =~ /iPhone|iPad|iPod|Android.*|webOS|SymbianOS|IEMobile|BlackBerry.*/
       end
     end
 
